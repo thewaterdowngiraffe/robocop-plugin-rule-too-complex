@@ -1,24 +1,21 @@
 [build-system]
-requires = ["setuptools>=61.0.0", "wheel"]
+requires = ["setuptools>=61.0.0", "wheel","robotframework-robocop>=9.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "robocop-custom-rules"
 version = "0.1.0"
 authors = [
-    { name = "Kandrus", email = "kandrus@example.com" },
+    { name = "Keegan Andrus", email = "kandrus@goeasy.com" },
 ]
 description = "Custom rules and checkers for Robocop linting."
-readme = "" # No readme file needed for a simple plugin
-
+readme = "" # TODO add a read me
 
 [project.entry-points."robocop.plugins"]
 robocop-custom-rules = "robocop_plugin.rules"
-
-
 
 [tool.setuptools.packages]
 find = { exclude = ["venv", "venv_robocop_plugin"] }
 
 [tool.setuptools.package-data]
-robocop_plugin = ["__init__.py"] # Ensure the package is recognized
+robocop_plugin = ["__init__.py"]
